@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url('./resources/images/bg.avif');
+  background-color: #000000!important;
   color: #FFFFFF!important;
 }
 
@@ -20,8 +20,9 @@ body {
   border-radius: 20px;
   padding: 25px;
   background-image: linear-gradient(45deg, var(--primary-color), #000000, var(--secondary-color));
-  animation: animatebg 25s ease infinite;
+  animation: animatebg 20s ease infinite;
   background-size: 400% 400%;
+  box-shadow: 1px 1px 10px;
 }
 
 .form-group .form-label {
@@ -64,7 +65,10 @@ a{
 }
 
 .grow-animation {
-  animation: grow 0.5s ease-in;
+  animation: grow 1s ease-in;
+  width: 100%;
+  height: 2px;
+  background-color: #FFFFFF;
 }
 
 .chat-list-item {
@@ -80,25 +84,38 @@ a{
   font-weight: 600;
 }
 
+.hover-scale-inc:hover {
+  transition: transform 0.4s;
+  transform: scale(1.4);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 /* web screens */
-@media (width >= 750px) {
+@media (width >= 500px) {
   .no-chat-selected-screen{display: flex!important;}
 }
 /* small screens */
-@media (width < 750px) { 
+@media (width < 500px) { 
   .no-chat-selected-screen {display: none!important;}
+  #main{height: 100%; width: 100%; overflow: hidden auto;}
 }
 
 /* animation keywords */
 @keyframes animatebg {
   0% {
 		background-position: 0% 50%;
+    box-shadow: 1px 1px 10px;
 	}
 	50% {
 		background-position: 100% 50%;
+    box-shadow: 1px 1px 20px;
 	}
 	100% {
 		background-position: 0% 50%;
+    box-shadow: 1px 1px 10px;
 	}
 }
 
@@ -120,19 +137,6 @@ a{
   0% {
     width: 0%;
   }
-
-  25% {
-    width: 25%;
-  }
-
-  50% {
-    width: 50%;
-  }
-
-  75% {
-    width: 75%;
-  }
-
   100% {
     width: 100%;
   }

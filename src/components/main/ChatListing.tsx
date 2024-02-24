@@ -19,8 +19,8 @@ export default function ChatListing(): ReactElement {
     return (
         <>
             <div style={{ height: '100%' }}>
-                <div className='d-flex align-items-center' style={{ height: '42px' }}>
-                    <Avatar className='cursor-pointer'>H</Avatar>
+                <div className='d-flex align-items-center' style={{ height: '42px', marginTop: 10 }}>
+                    <Link to={'/profile/1'}><Avatar className='cursor-pointer'>H</Avatar></Link>
                     <div className='form-group chat-list-search-bar' style={{ margin: '10px 10px', flex: 1 }}>
                         <input className='form-control' type='text' value={searchValue} onChange={(e: ChangeEvent<HTMLInputElement>) => setSearchValue(e.target.value)} style={{ borderRadius: '40px' }} placeholder='🔎 Search' />
                     </div>

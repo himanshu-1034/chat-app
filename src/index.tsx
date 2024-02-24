@@ -14,6 +14,8 @@ import Home from './components/main/Home';
 import { setupColor } from './resources/setup-colors';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ChatScreen from './components/main/ChatScreen';
+import ProfileSettings from './components/main/ProfileSettings';
+import ProfileSettingSection from './components/main/ProfileSettingSection';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +40,16 @@ const router = createBrowserRouter([
           {
             path: '/chats/:chatId',
             element: <ChatScreen />
+          }
+        ]
+      },
+      {
+        path: '/profile/:id',
+        element: <ProfileSettings />,
+        children: [
+          {
+            path: '/profile/:id/:section?',
+            element: <ProfileSettingSection />
           }
         ]
       }

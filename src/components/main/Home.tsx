@@ -21,7 +21,7 @@ export default function Home(): ReactElement {
                         You're in Anonymous Mode (Remaining). <Link className='mr-5 ml-5' to={'/login'}>End session and Login</Link> or <Link className='ml-5' to={'/register'}>Create Account ?</Link>
                     </div>
                 </div>
-                <div className='col-12' style={{ borderBottom: '1px solid #FFFFFF', margin: '10px 0px 0px 0px' }}></div>
+                <div className='col-12 grow-animation' style={{ borderBottom: '1px solid #FFFFFF', margin: '10px 0px 0px 0px' }}></div>
             </div>}
             <div className='row' style={{ height: isAnonymousMode ? 'calc(100% - 50px)' : '100%' }}>
                 <div className='chat-listing col-md-4 col-sm-12' style={{ height: '100%', borderRight: '1px solid', padding: '0px' }}>

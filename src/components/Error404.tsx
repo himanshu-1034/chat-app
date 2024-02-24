@@ -7,6 +7,7 @@ export default function Error404 ():ReactElement {
         <>
             <div style={{display: 'flex', alignItems: 'center', justifyContent:'center', flexDirection: 'column'}} id='main'>
                 <h1>Oops! An Error Occured</h1>
+                <h4>You have reached a corner of this site which is under development</h4>
                 <h4>{(error as any)?.status}</h4>
                 <h4>{(error as any)?.statusText}</h4>
                 <h4>{(error as any)?.message}</h4>
